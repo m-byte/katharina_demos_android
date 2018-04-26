@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScanText">
+        <attr name="format" format="string" />
+        <attr name="validator" format="string" />
+        <attr name="compare" format="boolean" />
+        <attr name="state_nomark" format="boolean" />
+    </declare-styleable>
+</resources>

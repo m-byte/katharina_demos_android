@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#00cb58</color>
+    <color name="darkgreen">#3b6a3e</color>
+    <color name="orange">#f47920</color>
+    <color name="red">#ff3b30</color>
+    <color name="darkred">#a44e00</color>
+    <color name="grey">#434343</color>
+    <color name="lightgrey">#cecece</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="transparentWhite">#808080</color>
+
+    <!--<color name="logoOrange">#e05531</color>
+    <color name="logoGrey">#86898a</color>-->
+
+    <color name="logoOrange">@color/orange</color>
+    <color name="logoGrey">#878787</color>
+
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorAccent">@color/orange</color>
+    <color name="inputBg">@color/grey</color>
+    <color name="inputBgFocus">@color/orange</color>
+    <color name="inputBgCheck">#385c38</color>
+    <color name="inputText">#e0000000</color>
+    <color name="inputTextHint">#e0000000</color>
+    <color name="buttonBg">@color/lightgrey</color>
+    <color name="buttonText">#e0000000</color>
+</resources>

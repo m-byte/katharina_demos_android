@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BasicDemo</string>
+    <string name="barcode_input">Scan order</string>
+    <string name="logo_description">ProGlove logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+</resources>
