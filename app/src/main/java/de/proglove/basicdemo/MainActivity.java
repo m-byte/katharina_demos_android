@@ -19,8 +19,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        showMainScreen();
+        setContentView(R.layout.activity_versorgung);
+
+        // Setting validation barcode:
+        // TODO: get "dest" (Haltepunkt); "huident" (HU); "trailer" (Wagen) from JSON
+        ScanText editHaltepunkt;
+        editHaltepunkt = findViewById(R.id.editHaltepunkt);
+        editHaltepunkt.requestFocus();
+        //editHaltepunkt.setCompareString(dest);
+        //showMainScreen();
+    }
+
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus) {
+            // Hide the status bar.
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")
