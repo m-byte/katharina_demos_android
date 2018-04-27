@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.matthias.kathaui.MainActivity">
+    tools:context="de.proglove.basicdemo.MainActivity">
 
     <de.proglove.katharinaUI.ScanText
         android:id="@+id/barcode_input"
