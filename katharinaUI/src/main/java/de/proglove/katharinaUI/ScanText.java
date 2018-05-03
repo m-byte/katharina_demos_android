@@ -26,6 +26,7 @@ public class ScanText extends AppCompatEditText {
 
     protected boolean valid;
     protected boolean compare;
+    protected boolean noUpdate;
     protected String validator;
     protected String format;
     protected String scannedText;
@@ -74,6 +75,14 @@ public class ScanText extends AppCompatEditText {
         this.compare = false;
         this.validator = s;
         update();
+    }
+
+    public void setValid(boolean b){
+        this.valid = b;
+    }
+    
+    public void setNoUpdate(boolean b){
+        this.noUpdate = b;
     }
 
     protected boolean validate(){
@@ -132,6 +141,10 @@ public class ScanText extends AppCompatEditText {
     }
 
     protected void update() {
+        if(noUpdate) {
+            // we don't want to update
+            return;
+        }
         if(!this.compare) {
             super.setText(this.format(this.scannedText));
         }else{
