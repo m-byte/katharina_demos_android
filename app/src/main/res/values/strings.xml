@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">BasicDemo</string>
+    <string name="app_name">IGZ_TagesForum</string>
     <string name="barcode_input">Scan order</string>
     <string name="logo_description">ProGlove logo</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="sap_logo">SAP Logo</string>
+    <string name="igz_logo">IGZ Logo</string>
+    <string name="dividing_line">Dividing Line</string>
 </resources>

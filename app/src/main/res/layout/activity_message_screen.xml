@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/logosBar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/sapLogo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:adjustViewBounds="true"
+                android:baselineAlignBottom="false"
+                android:contentDescription="@string/sap_logo"
+                app:srcCompat="@drawable/sap_logo" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/progloveLogo"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_description"
+            app:srcCompat="@drawable/pg_logo" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/igzLogo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/igz_logo"
+                app:srcCompat="@drawable/igz_logo" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Bitte an Ressource anmelden"
+            android:textSize="36sp"
+            android:textStyle="normal" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logosBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/dividingLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:contentDescription="@string/dividing_line"
+            app:srcCompat="@drawable/dividing_line" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="de.proglove.basicdemo.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logosBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/dividingLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:contentDescription="@string/dividing_line"
+            app:srcCompat="@drawable/dividing_line" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/logosBar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/sapLogo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:adjustViewBounds="true"
+                android:baselineAlignBottom="false"
+                android:contentDescription="@string/sap_logo"
+                app:srcCompat="@drawable/sap_logo" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/progloveLogo"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_description"
+            app:srcCompat="@drawable/pg_logo" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/igzLogo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/igz_logo"
+                app:srcCompat="@drawable/igz_logo" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:text="Entsorgung Haltepunkt"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textHaltepunkt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="HP - 00 09"
+            android:textAlignment="gravity"
+            android:textSize="45sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutHU"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:text="HU"
+                    android:textSize="18sp" />
+
+                <de.proglove.katharinaUI.ScanText
+                    android:id="@+id/editHU"
+                    android:layout_width="400dp"
+                    android:layout_height="70dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    app:compare="true"
+                    app:format="aaa aaa aaa"
+                    app:validator="A1902041420924" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutWagen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/layoutHU"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="5dp"
+                    android:text="Wagen"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <de.proglove.katharinaUI.ScanText
+                    android:id="@+id/textArtNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:textAlignment="gravity" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -29,13 +29,15 @@ public class AlertDialog {
         dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable(){
-                    @Override
-                    public void run() {
-                        focus.requestFocus();
-                    }
-                }, 10);
+                if(focus != null) {
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            focus.requestFocus();
+                        }
+                    }, 10);
+                }
             }
         });
 
